@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Brian Shipos</title>
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<link rel="stylesheet" href="portfolio.css">
+</head>
+<body id="body">
+	<nav>
+		<div id="sideNav" class="sideNav ">
+			  <a href="#"  onclick="homeNav()">Home</a>
+			  <a href="#"  onclick="aboutNav()">About</a>
+			  <a href="#" onclick="skillsNav()">Skills</a>
+			  <a href="#" onclick="projectsNav()">Projects</a>
+			  <a href="#" onclick="contactNav()">Contact</a>
+		</div>
+
+		<div id="sideBtn" class="navContainer" onclick="toggleNav()">
+			<div class="navDot"></div>
+			<div class="navDot"></div>
+			<div class="navDot"></div>
+		</div>
+	</nav>
+	<main id="splash" class="main">
+		<div class="animated slower delay-2s fadeIn">brian shipos</div>
+		<div>your next</div>
+		 <span> hire</span>
+	</main>
+	<main id="about" style="display: none">
+		<div>About me!</div>
+	</main>
+	<main id="skills" style="display: none">
+		<ul>
+			<li><i class="fab fa-js-square"></i> Javascript ( ...ES9 )</li>
+			<li><i class="fab fa-react"></i> React</li>
+			<li><i class="fab fa-git-square"></i> VCS (Git)</li>
+			<li><i class="fab fa-html5"></i> HTML5</li>
+			<li><i class="fab fa-css3-alt"></i> CSS3</li>
+			<li><img class="postgreSQL" src="./resources/dbs-postgresql_icon-icons.com_50907.png"> PostgreSQL</li>
+			<li><i class="fab fa-python"></i> Python 3</li>
+			<li><i class="fab fa-adobe"></i> Adobe Creative Suite</li>
+		</ul>
+	</main>
+	<main id="projects" style="display: none">
+		<div class="project">
+			<h2 class="headline">Facial Recognition Project</h2>
+			<div>
+					<a class="hover link" href="https://facial-recognition-shipos.herokuapp.com/"  target="_blank" rel="noopener noreferrer">Project Page</a>
+					<a class="hover link" href="https://github.com/Demiurgis/facial-recognition" target="_blank" rel="noopener noreferrer">GitHub Page</a>
+			</div>	
+			<p>A responsive React App that recognizes the presence of a face in a photograph. Utilizes a REST server API with Express and Node.js. Registration and Sign-In utilizes a PostgreSQL database. API for facial recognition provided by Clarifai API.</p>
+		</div>
+		<div class="project">
+			<h2 class="headline">Cat-Friends Project</h2>
+			<div>
+				<a class="hover link" href="https://demiurgis.github.io/cat-friends/"  target="_blank" rel="noopener noreferrer">Project Page</a>
+				<a class="hover link" href="https://github.com/Demiurgis/cat-friends" target="_blank" rel="noopener noreferrer">GitHub Page</a>
+			</div>	
+			<p>A responsive React App that sorts a contact list. Created with React and then refactored with Redux.</p>
+		</div>
+		<div class="project">
+			<h2 class="headline">Background Generator</h2>
+			<div>
+				<a class="hover link" href="https://demiurgis.github.io/background-generator/"  target="_blank" rel="noopener noreferrer">Project Page</a>
+				<a class="hover link" href="https://github.com/Demiurgis/background-generator" target="_blank" rel="noopener noreferrer">GitHub Page</a>
+			</div>	
+			<p>Simple app that displays a linear gradient as background. Color selectors as well as a random feature allows for customization.</p>
+		</div>
+	</main>
+	<main id="contact" style="display: none">
+		<div class="hover link" id="email">bshipos@gmail.com <a class="hover link" id="mailto" href="mailto:bshipos@gmail.com">email </a><span class="hover link" onclick="copyToClipboard('bshipos@gmail.com')">copy</span></div>
+		<a class="hover link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/brian-shipos" >LinkedIn</a>
+		<a class="hover link" target="_blank" rel="noopener noreferrer" href="https://github.com/Demiurgis">GitHub</a>
+		<a class="hover link" id="resume"  target="_blank" rel="noopener noreferrer" href="./resources/BrianShipos.pdf">Resumé</a>
+	</main>
+	<script type="text/javascript" src="portfolio.js"></script>
+</body>
+</html>

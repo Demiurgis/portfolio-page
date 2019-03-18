@@ -1,0 +1,167 @@
+:root {
+	font-size: 62.5%;
+}
+
+body{
+	background: #0F2027;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	height: 100vh;
+}
+
+nav {
+	display: flex;
+	font-family: Arial;
+}
+
+.sideNav {
+	display: flex;
+	flex-direction: column;
+	height: 100%; /* 100% Full-height */
+	width: 0px; /* 0 width - change this with JavaScript */
+	position: fixed; /* Stay in place */
+	z-index: 99; /* Stay on top */
+	top: 0; /* Stay at the top */
+	right: 0;
+	background-color: rgba(15, 15, 15, 1); /* Black*/
+	overflow-x: hidden; /* Disable horizontal scroll */
+	padding-top: 25%; /* Place content 60px from the top */
+	transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+	transition-timing-function: ease-in-out; 
+}
+
+.sideNav a {
+	padding-left: 30%;
+	text-decoration: none;
+	font-size: 3.5rem;
+	color: #818181;
+	display: block;
+	transition: 1s;
+}
+
+.sideNav a:hover {
+	color: #f1f1f1;
+}
+
+#sideBtn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	z-index: 100;
+	cursor: pointer;
+	align-self: center;
+	color:  rgba(15, 15, 15, 1);
+	transition: margin-right .5s, border-radius .5s;
+	transition-timing-function: ease-in-out; 
+	height: 5rem;
+	width: 5rem;
+	border-radius: 50%;
+	background-color:  rgba(15, 15, 15, 1);
+}
+
+.navIcon {
+	position: relative;
+	display: block;
+}
+
+.navDot {
+	background-color: white;
+	border-radius: 10px;
+	width: 0.7rem;
+	height: 0.7rem;
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	-webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: background-color .25s ease-in-out;
+	transition: background-color .25s ease-in-out;
+}
+
+.navDot:first-child {
+	position: absolute;
+	top: 7px;
+	-webkit-animation: rotateLeftOut 1s ease-in-out normal;
+	animation: rotateLeftOut 1s ease-in-out normal;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-iteration-count: initial;
+	animation-iteration-count: 1;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+.navDot:last-child {
+	position: absolute;
+	bottom: 7px;
+	-webkit-animation: rotateRightOut 1s ease-in-out normal;
+	animation: rotateRightOut 1s ease-in-out normal;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-iteration-count: initial;
+	animation-iteration-count: 1;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+@media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 1.8rem;}
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	height: 100vh;
+	font: 800 4.25rem "Arial";
+	color: white;
+	padding-right: 20%;
+}
+
+#skills, #contact {
+	font: 800 3rem "Arial";
+}
+
+.postgreSQL {
+	max-height: 3rem;
+}
+
+ul {
+	list-style-type: none;
+}
+
+i {
+	font-weight: 100;
+}
+
+#projects {
+	padding-left: 15%;
+	font: 500 2rem "Arial";
+	color: white;
+	text-decoration: none;
+}
+
+#projects a {
+	font-weight: 600;
+	padding-left: 2.5rem;
+}
+
+.project {
+	padding-bottom: 2rem;
+}
+
+.link {
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#contact span, #mailto {
+	font-size: .6em;
+}
+
+.hover:hover {
+	color: rgba(255,255,255,.75);
+}
