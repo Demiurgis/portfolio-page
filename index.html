@@ -3,7 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Brian Shipos</title>
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 	<link rel="stylesheet" href="portfolio.css">
@@ -67,11 +66,16 @@
 				<a class="hover link" href="https://demiurgis.github.io/background-generator/"  target="_blank" rel="noopener noreferrer">Project Page</a>
 				<a class="hover link" href="https://github.com/Demiurgis/background-generator" target="_blank" rel="noopener noreferrer">GitHub Page</a>
 			</div>	
-			<p>Simple app that displays a linear gradient as background. Color selectors as well as a random feature allows for customization.</p>
+			<p>Simple app that displays a linear gradient as background. Color selectors as well as a random feature allows for custom backgrounds with CSS text for ease of use..</p>
 		</div>
 	</main>
 	<main id="contact" style="display: none">
-		<div class="hover link" id="email">bshipos@gmail.com <a class="hover link" id="mailto" href="mailto:bshipos@gmail.com">email </a><span class="hover link" onclick="copyToClipboard('bshipos@gmail.com')">copy</span></div>
+		<div class="animated" id="emailOptions" style="visibility: collapse">
+			<a class="hover link" id="mailto" href="mailto:bshipos@gmail.com">email</a>
+			<span class="hover link" onclick="copyToClipboard('bshipos@gmail.com')">copy</span>
+		</div>
+		<div class="hover link" id="email" onclick="emailOpsToggle()">bshipos@gmail.com 
+		</div>
 		<a class="hover link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/brian-shipos" >LinkedIn</a>
 		<a class="hover link" target="_blank" rel="noopener noreferrer" href="https://github.com/Demiurgis">GitHub</a>
 		<a class="hover link" id="resume"  target="_blank" rel="noopener noreferrer" href="./resources/BrianShipos.pdf">Resumé</a>

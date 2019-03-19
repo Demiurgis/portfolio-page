@@ -6,6 +6,7 @@ const skills = document.getElementById("skills");
 const projects = document.getElementById("projects");
 const contact = document.getElementById("contact");
 const body = document.getElementById("body");
+const emailOptions = document.getElementById("emailOptions");
 
 const openNav = () => {
 	sideNav.style.width = "90%";
@@ -75,6 +76,30 @@ const contactNav = () => {
 	closeNav()
 }
 
+function animateCSS(element, animationName, callback) {
+    const node = document.querySelector(element)
+    node.classList.add('animated', animationName)
+
+    function handleAnimationEnd() {
+        node.classList.remove('animated', animationName)
+        node.removeEventListener('animationend', handleAnimationEnd)
+
+        if (typeof callback === 'function') callback()
+    }
+    node.addEventListener('animationend', handleAnimationEnd)
+}
+
+const emailOpsToggle = () => {
+	if ( emailOptions.style.visibility === "collapse" ) {
+		animateCSS('#emailOptions', 'fadeIn')
+		emailOptions.style.visibility = "visible";
+	} else {
+		animateCSS('#emailOptions', 'fadeOut', function(){
+			emailOptions.style.visibility = "collapse";
+		})
+	}
+}
+
 const copyToClipboard = str => {
   const el = document.createElement('textarea');  // Create a <textarea> element
   el.value = str;                                 // Set its value to the string that you want copied
@@ -93,8 +118,7 @@ const copyToClipboard = str => {
     document.getSelection().removeAllRanges();    // Unselect everything on the HTML document
     document.getSelection().addRange(selected);   // Restore the original selection
   }
-// collapse spans
+emailOpsToggle()
 };
-
 
 window.addEventListener("wheel", toggleNav);
