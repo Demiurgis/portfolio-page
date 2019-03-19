@@ -3,13 +3,34 @@
 }
 
 body{
-	background: #0F2027;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/*	background: #0F2027;*/
+/*	background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);
+	background: linear-gradient(to top, #2C5364, #203A43, #0F2027);*/
 	height: 100vh;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
+/*	background-repeat: no-repeat;
+	background-attachment: fixed;*/
 }
+
+#top, #bottom, #left, #right {
+	background: #cbcbcb;
+	position: fixed;
+}
+
+#left, #right {
+	top: 0; bottom: 0;
+	width: 11%;
+}
+
+#left { left: 0; }
+#right { right: 0; }
+
+#top, #bottom {
+	left: 0; right: 0;
+	height: 11%;
+}
+
+#top { top: 0; }
+#bottom { bottom: 0; }
 
 nav {
 	display: flex;
@@ -25,7 +46,8 @@ nav {
 	z-index: 99; /* Stay on top */
 	top: 0; /* Stay at the top */
 	right: 0;
-	background-color: rgba(15, 15, 15, 1); /* Black*/
+	/*background-color: rgba(15, 15, 15, 1);*/
+	background: rgba(15, 15, 15, 1) url("./resources/navscroll.gif");
 	overflow-x: hidden; /* Disable horizontal scroll */
 	padding-top: 25%; /* Place content 60px from the top */
 	transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -56,12 +78,16 @@ nav {
 	z-index: 100;
 	cursor: pointer;
 	align-self: center;
-	color:  rgba(15, 15, 15, 1);
-	transition: margin-right .5s, border-radius .5s;
+	/*color:  rgba(15, 15, 15, 1);*/
+	transition: margin-right .5s, border-radius .5s, background-color .25s;
 	transition-timing-function: ease-in-out; 
 	height: 5rem;
 	width: 5rem;
 	border-radius: 50%;
+	background-color:  rgba(15, 15, 15, 0);
+}
+
+#sideBtn:hover {
 	background-color:  rgba(15, 15, 15, 1);
 }
 
@@ -123,8 +149,27 @@ main {
 	padding-right: 20%;
 }
 
-#skills, #contact {
+#splash {
+	background: green no-repeat center fixed  url("./resources/splash.gif");
+	background-size: cover;
+}
+
+#about {
 	font: 800 3rem "Arial";
+	background: green no-repeat center fixed  url("./resources/about.gif");
+	background-size: cover;
+}
+
+#skills {
+	font: 800 3rem "Arial";
+	background: green no-repeat center fixed  url("./resources/skills.gif");
+	background-size: cover;
+}
+
+#contact {
+	font: 800 3rem "Arial";
+	background: green no-repeat center fixed  url("./resources/contact.gif");
+	background-size: cover;
 }
 
 .postgreSQL {
@@ -141,10 +186,14 @@ i {
 
 #projects {
 	align-items: flex-start;
-	padding-left: 20%;
+	padding-left: 15%;
 	font: 500 2rem "Arial";
 	color: white;
 	text-decoration: none;
+	padding-right: 15%;
+	background: green no-repeat center fixed  url("./resources/projects.gif");
+	background-size: cover;
+	overflow: scroll;
 }
 
 #projects a {

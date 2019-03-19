@@ -7,6 +7,7 @@ const projects = document.getElementById("projects");
 const contact = document.getElementById("contact");
 const body = document.getElementById("body");
 const emailOptions = document.getElementById("emailOptions");
+const catFriends = document.getElementById("catFriends");
 
 const openNav = () => {
 	sideNav.style.width = "90%";
@@ -22,12 +23,14 @@ const toggleNav = () => {
 	if ( sideNav.style.width === "90%" ) {
 		sideNav.style.width = "0px";
 		sideBtn.style.marginRight = "0px";
-		sideBtn.style.borderRadius = "50% 50% 50% 50%"
+		sideBtn.style.borderRadius = "50% 50% 50% 50%";
+		sideBtn.style.backgroundColor = null;
 
 	} else {
 		sideNav.style.width = "90%";
 		sideBtn.style.marginRight = "90%";
-		sideBtn.style.borderRadius = "50% 0% 0% 50%"
+		sideBtn.style.borderRadius = "50% 0% 0% 50%";
+		sideBtn.style.backgroundColor = "rgba(15, 15, 15, 1)";
 	}
 }
 
@@ -96,6 +99,54 @@ const emailOpsToggle = () => {
 	} else {
 		animateCSS('#emailOptions', 'fadeOut', function(){
 			emailOptions.style.visibility = "collapse";
+		})
+	}
+}
+
+const faceToggle = () => {
+	if ( face.style.display === "none" ) {
+		animateCSS('#face', 'fadeIn')
+		face.style.display = null;
+		if ( catFriends.style.display !== "none" ) {
+			catToggle()
+		} else if ( bkgdGen.style.display !== "none" ) {
+			bkgdGenToggle()
+		}
+	} else {
+		animateCSS('#face', 'fadeOut', function(){
+			face.style.display = "none";
+		})
+	}
+}
+
+const catToggle = () => {
+	if ( catFriends.style.display === "none" ) {
+		animateCSS('#catFriends', 'fadeIn')
+		catFriends.style.display = null;
+		if ( face.style.display !== "none" ) {
+			faceToggle()
+		} else if ( bkgdGen.style.display !== "none" ) {
+			bkgdGenToggle()
+		}
+	} else {
+		animateCSS('#catFriends', 'fadeOut', function(){
+			catFriends.style.display = "none";
+		})
+	}
+}
+
+const bkgdGenToggle = () => {
+	if ( bkgdGen.style.display === "none" ) {
+		animateCSS('#bkgdGen', 'fadeIn')
+		bkgdGen.style.display = null;
+		if ( catFriends.style.display !== "none" ) {
+			catToggle()
+		} else if ( face.style.display !== "none" ) {
+			faceToggle()
+		}
+	} else {
+		animateCSS('#bkgdGen', 'fadeOut', function(){
+			bkgdGen.style.display = "none";
 		})
 	}
 }
