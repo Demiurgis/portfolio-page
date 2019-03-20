@@ -8,6 +8,11 @@ const contact = document.getElementById("contact");
 const body = document.getElementById("body");
 const emailOptions = document.getElementById("emailOptions");
 const catFriends = document.getElementById("catFriends");
+const navSplash = document.getElementById("navSplash");
+const navAbout = document.getElementById("navAbout");
+const navSkills = document.getElementById("navSkills");
+const navProjects = document.getElementById("navProjects");
+const navContact = document.getElementById("navContact");
 
 const openNav = () => {
 	sideNav.style.width = "90%";
@@ -34,62 +39,23 @@ const toggleNav = () => {
 	}
 }
 
-const homeNav = () => {
-	about.style.display = "none";
-	skills.style.display = "none";
-	projects.style.display = "none";
-	contact.style.display = "none";
-	splash.style.display = "flex";
-	closeNav()
-}
-
-const aboutNav = () => {
-	splash.style.display = "none";
-	skills.style.display = "none";
-	projects.style.display = "none";
-	contact.style.display = "none";
-	about.style.display = "flex";
-	closeNav()
-}
-
-const skillsNav = () => {
-	splash.style.display = "none";
-	projects.style.display = "none";
-	contact.style.display = "none";
-	about.style.display = "none";
-	skills.style.display = "flex";
-	closeNav()
-}
-
-const projectsNav = () => {
-	splash.style.display = "none";
-	skills.style.display = "none";
-	contact.style.display = "none";
-	about.style.display = "none";
-	projects.style.display = "flex";
-	closeNav()
-}
-
-const contactNav = () => {
-	splash.style.display = "none";
-	skills.style.display = "none";
-	projects.style.display = "none";
-	about.style.display = "none";
-	contact.style.display = "flex";
+const navSelect = ( newClass ) => {
+	const oldClass = body.classList.item(0);
+	body.classList.replace( oldClass, newClass );
 	closeNav()
 }
 
 function animateCSS(element, animationName, callback) {
-    const node = document.querySelector(element)
-    node.classList.add('animated', animationName)
+	const node = document.querySelector(element)
+	node.classList.add('animated', animationName)
 
-    function handleAnimationEnd() {
-        node.classList.remove('animated', animationName)
-        node.removeEventListener('animationend', handleAnimationEnd)
+	function handleAnimationEnd() {
+		node.classList.remove('animated', animationName)
+		node.removeEventListener('animationend', handleAnimationEnd)
 
-        if (typeof callback === 'function') callback()
-    }
-    node.addEventListener('animationend', handleAnimationEnd)
+		if (typeof callback === 'function') callback()
+	}
+node.addEventListener('animationend', handleAnimationEnd)
 }
 
 const emailOpsToggle = () => {
@@ -99,54 +65,6 @@ const emailOpsToggle = () => {
 	} else {
 		animateCSS('#emailOptions', 'fadeOut', function(){
 			emailOptions.style.visibility = "collapse";
-		})
-	}
-}
-
-const faceToggle = () => {
-	if ( face.style.display === "none" ) {
-		animateCSS('#face', 'fadeIn')
-		face.style.display = null;
-		if ( catFriends.style.display !== "none" ) {
-			catToggle()
-		} else if ( bkgdGen.style.display !== "none" ) {
-			bkgdGenToggle()
-		}
-	} else {
-		animateCSS('#face', 'fadeOut', function(){
-			face.style.display = "none";
-		})
-	}
-}
-
-const catToggle = () => {
-	if ( catFriends.style.display === "none" ) {
-		animateCSS('#catFriends', 'fadeIn')
-		catFriends.style.display = null;
-		if ( face.style.display !== "none" ) {
-			faceToggle()
-		} else if ( bkgdGen.style.display !== "none" ) {
-			bkgdGenToggle()
-		}
-	} else {
-		animateCSS('#catFriends', 'fadeOut', function(){
-			catFriends.style.display = "none";
-		})
-	}
-}
-
-const bkgdGenToggle = () => {
-	if ( bkgdGen.style.display === "none" ) {
-		animateCSS('#bkgdGen', 'fadeIn')
-		bkgdGen.style.display = null;
-		if ( catFriends.style.display !== "none" ) {
-			catToggle()
-		} else if ( face.style.display !== "none" ) {
-			faceToggle()
-		}
-	} else {
-		animateCSS('#bkgdGen', 'fadeOut', function(){
-			bkgdGen.style.display = "none";
 		})
 	}
 }
@@ -168,8 +86,35 @@ const copyToClipboard = str => {
   if (selected) {                                 // If a selection existed before copying
     document.getSelection().removeAllRanges();    // Unselect everything on the HTML document
     document.getSelection().addRange(selected);   // Restore the original selection
-  }
+}
 emailOpsToggle()
 };
 
-window.addEventListener("wheel", toggleNav);
+const debounce = (func, wait, immediate) => {
+	var timeout;
+
+	return function executedFunction() {
+		const context = this;
+		const args = arguments;
+
+		const later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		const callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
+
+const scrollDebounce = debounce(function() {
+	toggleNav()
+}, 400, true);
+
+window.addEventListener("wheel", scrollDebounce);
+navSplash.addEventListener("click", () => {navSelect('splash')}, false);
+navAbout.addEventListener("click", () => {navSelect('about')}, false);
+navSkills.addEventListener("click", () => {navSelect('skills')}, false);
+navProjects.addEventListener("click", () => {navSelect('projects')}, false);
+navContact.addEventListener("click", () => {navSelect('contact')}, false);

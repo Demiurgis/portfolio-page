@@ -3,12 +3,47 @@
 }
 
 body{
-/*	background: #0F2027;*/
-/*	background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);
-	background: linear-gradient(to top, #2C5364, #203A43, #0F2027);*/
 	height: 100vh;
-/*	background-repeat: no-repeat;
-	background-attachment: fixed;*/
+}
+
+.splash #splash {
+	display: flex;
+}
+
+.about #about {
+	display: flex;
+}
+
+.skills #skills {
+	display: flex;
+}
+
+.projects #projects {
+	display: flex;
+}
+
+.contact #contact {
+	display: flex;
+}
+
+.splash .navDot {
+	background-color: #006666;
+}
+
+.about .navDot {
+	background-color: #ff9933;
+}
+
+.skills .navDot {
+	background-color: #9933cc;
+}
+
+.projects .navDot {
+	background-color: #333399;
+}
+
+.contact .navDot {
+	background-color: #006600;
 }
 
 #top, #bottom, #left, #right {
@@ -40,31 +75,31 @@ nav {
 .sideNav {
 	display: flex;
 	flex-direction: column;
-	height: 100%; /* 100% Full-height */
-	width: 0px; /* 0 width - change this with JavaScript */
-	position: fixed; /* Stay in place */
-	z-index: 99; /* Stay on top */
-	top: 0; /* Stay at the top */
+		justify-content: center;
+	height: 100%; 
+	width: 0px; 
+	position: fixed; 
+	z-index: 99; 
+	top: 0; 
 	right: 0;
-	/*background-color: rgba(15, 15, 15, 1);*/
 	background: rgba(15, 15, 15, 1) url("./resources/navscroll.gif");
-	overflow-x: hidden; /* Disable horizontal scroll */
-	padding-top: 25%; /* Place content 60px from the top */
-	transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+	overflow-x: hidden;
+	/*padding-top: 25%;*/
+	transition: 0.5s;
 	transition-timing-function: ease-in-out; 
 }
 
-.sideNav a {
+.sideNav div {
 	padding-left: 30%;
 	padding-bottom: 1.75rem;
 	text-decoration: none;
 	font-size: 3.5rem;
 	color: #818181;
 	display: block;
-	transition: 1s;
+	transition: .1s;
 }
 
-.sideNav a:hover {
+.sideNav div:hover {
 	color: #f1f1f1;
 }
 
@@ -78,8 +113,7 @@ nav {
 	z-index: 100;
 	cursor: pointer;
 	align-self: center;
-	/*color:  rgba(15, 15, 15, 1);*/
-	transition: margin-right .5s, border-radius .5s, background-color .25s;
+	transition: margin-right .5s, border-radius .5s, background-color .15s;
 	transition-timing-function: ease-in-out; 
 	height: 5rem;
 	width: 5rem;
@@ -101,36 +135,16 @@ nav {
 	border-radius: 10px;
 	width: 0.7rem;
 	height: 0.7rem;
-	-webkit-transform-origin: 50% 50%;
-	transform-origin: 50% 50%;
-	-webkit-transform: rotate(0deg);
-	transform: rotate(0deg);
-	-webkit-transition: background-color .25s ease-in-out;
-	transition: background-color .25s ease-in-out;
 }
 
 .navDot:first-child {
 	position: absolute;
 	top: 7px;
-	-webkit-animation: rotateLeftOut 1s ease-in-out normal;
-	animation: rotateLeftOut 1s ease-in-out normal;
-	-webkit-animation-iteration-count: 1;
-	-webkit-animation-iteration-count: initial;
-	animation-iteration-count: 1;
-	-webkit-animation-fill-mode: forwards;
-	animation-fill-mode: forwards;
 }
 
 .navDot:last-child {
 	position: absolute;
 	bottom: 7px;
-	-webkit-animation: rotateRightOut 1s ease-in-out normal;
-	animation: rotateRightOut 1s ease-in-out normal;
-	-webkit-animation-iteration-count: 1;
-	-webkit-animation-iteration-count: initial;
-	animation-iteration-count: 1;
-	-webkit-animation-fill-mode: forwards;
-	animation-fill-mode: forwards;
 }
 
 @media screen and (max-height: 450px) {
@@ -152,24 +166,28 @@ main {
 #splash {
 	background: green no-repeat center fixed  url("./resources/splash.gif");
 	background-size: cover;
+	display: none;
 }
 
 #about {
 	font: 800 3rem "Arial";
 	background: green no-repeat center fixed  url("./resources/about.gif");
 	background-size: cover;
+	display: none;
 }
 
 #skills {
 	font: 800 3rem "Arial";
 	background: green no-repeat center fixed  url("./resources/skills.gif");
 	background-size: cover;
+	display: none;
 }
 
 #contact {
 	font: 800 3rem "Arial";
 	background: green no-repeat center fixed  url("./resources/contact.gif");
 	background-size: cover;
+	display: none;
 }
 
 .postgreSQL {
@@ -194,6 +212,7 @@ i {
 	background: green no-repeat center fixed  url("./resources/projects.gif");
 	background-size: cover;
 	overflow: scroll;
+	display: none;
 }
 
 #projects a {

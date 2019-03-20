@@ -1,1 +1,5 @@
-#333399
+contact = #006600
+about = #ff9933
+splash = #006666
+skills = #9933cc
+projects = #333399
