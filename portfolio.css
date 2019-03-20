@@ -4,6 +4,12 @@
 
 body{
 	height: 100vh;
+	margin: 11vh;
+	background: #cbcbcb;
+/*	margin-top: 11vh;
+	margin-bottom: 11vh;
+	margin-left: 11vw;
+	margin-right: 11vw;*/
 }
 
 .splash #splash {
@@ -89,6 +95,10 @@ nav {
 	transition-timing-function: ease-in-out; 
 }
 
+.openNav {
+	width: 93%;
+}
+
 .sideNav div {
 	padding-left: 30%;
 	padding-bottom: 1.75rem;
@@ -103,7 +113,7 @@ nav {
 	color: #f1f1f1;
 }
 
-#sideBtn {
+.sideBtn {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -117,8 +127,14 @@ nav {
 	transition-timing-function: ease-in-out; 
 	height: 5rem;
 	width: 5rem;
-	border-radius: 50%;
+	border-radius: 50% 50% 50% 50%;
 	background-color:  rgba(15, 15, 15, 0);
+}
+
+.openBtn {
+	margin-right: 93%;
+	border-radius: 50% 0% 0% 50%;
+	background-color: rgba(15, 15, 15, 1);
 }
 
 #sideBtn:hover {
@@ -160,16 +176,18 @@ main {
 	height: 100vh;
 	font: 800 4.25rem "Arial";
 	color: white;
-	padding-right: 20%;
+	padding-right: 30%;
 }
 
 #splash {
+	height: 78vh;
 	background: green no-repeat center fixed  url("./resources/splash.gif");
 	background-size: cover;
 	display: none;
 }
 
 #about {
+	height: 78vh;
 	font: 800 3rem "Arial";
 	background: green no-repeat center fixed  url("./resources/about.gif");
 	background-size: cover;
@@ -177,6 +195,7 @@ main {
 }
 
 #skills {
+	height: 78vh;
 	font: 800 3rem "Arial";
 	background: green no-repeat center fixed  url("./resources/skills.gif");
 	background-size: cover;
@@ -184,6 +203,7 @@ main {
 }
 
 #contact {
+	height: 78vh;
 	font: 800 3rem "Arial";
 	background: green no-repeat center fixed  url("./resources/contact.gif");
 	background-size: cover;
@@ -203,6 +223,7 @@ i {
 }
 
 #projects {
+	height: 78vh;
 	align-items: flex-start;
 	padding-left: 15%;
 	font: 500 2rem "Arial";
@@ -211,7 +232,6 @@ i {
 	padding-right: 15%;
 	background: green no-repeat center fixed  url("./resources/projects.gif");
 	background-size: cover;
-	overflow: scroll;
 	display: none;
 }
 

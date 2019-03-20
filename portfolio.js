@@ -15,27 +15,20 @@ const navProjects = document.getElementById("navProjects");
 const navContact = document.getElementById("navContact");
 
 const openNav = () => {
-	sideNav.style.width = "90%";
-	sideBtn.style.marginRight = "90%";
+	sideNav.classList.add('openNav');
+	sideBtn.classList.add('openBtn');
 }
 
 const closeNav = () => {
-	sideNav.style.width = "0";
-	sideBtn.style.marginRight = "0";
+	sideNav.classList.remove('openNav');
+	sideBtn.classList.remove('openBtn');
 }
 
 const toggleNav = () => {
-	if ( sideNav.style.width === "90%" ) {
-		sideNav.style.width = "0px";
-		sideBtn.style.marginRight = "0px";
-		sideBtn.style.borderRadius = "50% 50% 50% 50%";
-		sideBtn.style.backgroundColor = null;
-
+	if ( sideNav.classList.contains('openNav') ) {
+		closeNav();
 	} else {
-		sideNav.style.width = "90%";
-		sideBtn.style.marginRight = "90%";
-		sideBtn.style.borderRadius = "50% 0% 0% 50%";
-		sideBtn.style.backgroundColor = "rgba(15, 15, 15, 1)";
+		openNav();
 	}
 }
 
