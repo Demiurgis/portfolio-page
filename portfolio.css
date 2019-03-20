@@ -3,75 +3,10 @@
 }
 
 body{
-	height: 100vh;
+	height: 78vh;
 	margin: 11vh;
 	background: #cbcbcb;
-/*	margin-top: 11vh;
-	margin-bottom: 11vh;
-	margin-left: 11vw;
-	margin-right: 11vw;*/
 }
-
-.splash #splash {
-	display: flex;
-}
-
-.about #about {
-	display: flex;
-}
-
-.skills #skills {
-	display: flex;
-}
-
-.projects #projects {
-	display: flex;
-}
-
-.contact #contact {
-	display: flex;
-}
-
-.splash .navDot {
-	background-color: #006666;
-}
-
-.about .navDot {
-	background-color: #ff9933;
-}
-
-.skills .navDot {
-	background-color: #9933cc;
-}
-
-.projects .navDot {
-	background-color: #333399;
-}
-
-.contact .navDot {
-	background-color: #006600;
-}
-
-#top, #bottom, #left, #right {
-	background: #cbcbcb;
-	position: fixed;
-}
-
-#left, #right {
-	top: 0; bottom: 0;
-	width: 11%;
-}
-
-#left { left: 0; }
-#right { right: 0; }
-
-#top, #bottom {
-	left: 0; right: 0;
-	height: 11%;
-}
-
-#top { top: 0; }
-#bottom { bottom: 0; }
 
 nav {
 	display: flex;
@@ -96,7 +31,7 @@ nav {
 }
 
 .openNav {
-	width: 93%;
+	width: calc(100vw - 11vh);
 }
 
 .sideNav div {
@@ -132,7 +67,7 @@ nav {
 }
 
 .openBtn {
-	margin-right: 93%;
+	margin-right: calc(100vw - 11vh);
 	border-radius: 50% 0% 0% 50%;
 	background-color: rgba(15, 15, 15, 1);
 }
@@ -177,6 +112,7 @@ main {
 	font: 800 4.25rem "Arial";
 	color: white;
 	padding-right: 30%;
+	min-width: 30vw;
 }
 
 #splash {
@@ -202,14 +138,6 @@ main {
 	display: none;
 }
 
-#contact {
-	height: 78vh;
-	font: 800 3rem "Arial";
-	background: green no-repeat center fixed  url("./resources/contact.gif");
-	background-size: cover;
-	display: none;
-}
-
 .postgreSQL {
 	max-height: 3rem;
 }
@@ -222,11 +150,39 @@ i {
 	font-weight: 100;
 }
 
+#contact {
+	height: 78vh;
+	font: 800 3rem "Arial";
+	background: green no-repeat center fixed  url("./resources/contact.gif");
+	background-size: cover;
+	display: none;
+	text-align: right;
+}
+
+.hidden {
+	visibility: collapse;
+}
+
+.visible {
+	visibility: visible;
+}
+
+#contact span, #mailto {
+	font-size: .6em;
+	padding-left: 1rem;
+}
+
+#creditsLinks{
+	text-align: right;
+	font: 100 1.75rem "Arial";
+	width: 30rem;
+}
+
 #projects {
 	height: 78vh;
 	align-items: flex-start;
 	padding-left: 15%;
-	font: 500 2rem "Arial";
+	font: 500 calc(1rem + .5vw) "Arial";
 	color: white;
 	text-decoration: none;
 	padding-right: 15%;
@@ -235,13 +191,33 @@ i {
 	display: none;
 }
 
-#projects a {
+@media (min-width: 80rem) {
+	#projects {
+		font-size: 2rem
+	}
+
+	#headline {
+		font-size: 3rem;
+	}
+}
+
+#headline { 
+	font: 800 calc(2rem + .6vw) "Arial";
+	padding-left: 0;
+ }
+
+.project a {
 	font-weight: 600;
 	padding-left: 2.5rem;
 }
 
+.project p {
+	padding-left: 1rem;
+}
+
 .project {
 	padding-bottom: 2rem;
+	padding-left: 1rem;
 }
 
 .link {
@@ -250,15 +226,73 @@ i {
 	cursor: pointer;
 }
 
-#contact span, #mailto {
-	font-size: .6em;
-	padding-left: 1rem;
+.pulse {
+  position: absolute;
+  height: 4.9rem;
+  width: 4.9rem;
+  top: 50%;
+  right: 0;
+  opacity: 0;
+  border: 1px solid rgba(15, 15, 15, .5);
+  border-radius: 50%;
+  -webkit-animation: pulsate .9s ease-out;
+  -webkit-animation-iteration-count: infinite;
 }
-/*
-#emailOptions {
-	transition: visibility 2s;
-}*/
+
+@-webkit-keyframes pulsate {
+  0% {
+    transform: scale(1, 1);
+    opacity: 0.0;
+  }
+  50% {
+    opacity: .7;
+  }
+  100% {
+    transform: scale( .7, .7);
+    opacity: 0.0;
+  }
+}
 
 .hover:hover {
-	color: rgba(255,255,255,.75);
+	opacity: .5;
+}
+
+.splash #splash {
+	display: flex;
+}
+
+.about #about {
+	display: flex;
+}
+
+.skills #skills {
+	display: flex;
+}
+
+.projects #projects {
+	display: flex;
+}
+
+.contact #contact {
+	display: flex;
+}
+
+.splash .navDot {
+	background-color: #006666;
+}
+
+.about .navDot {
+	background-color: #ff9933;
+}
+
+.skills .navDot {
+	background-color: #9933cc;
+}
+
+.projects .navDot {
+	background-color: #333399;
+}
+
+.contact .navDot {
+	background-color: #006600;
 }

@@ -13,6 +13,10 @@ const navAbout = document.getElementById("navAbout");
 const navSkills = document.getElementById("navSkills");
 const navProjects = document.getElementById("navProjects");
 const navContact = document.getElementById("navContact");
+const copy = document.getElementById("copy");
+const email = document.getElementById("email");
+const creditsLinks = document.getElementById("creditsLinks");
+const credits = document.getElementById("credits");
 
 const openNav = () => {
 	sideNav.classList.add('openNav');
@@ -52,12 +56,27 @@ node.addEventListener('animationend', handleAnimationEnd)
 }
 
 const emailOpsToggle = () => {
-	if ( emailOptions.style.visibility === "collapse" ) {
+	if ( emailOptions.classList.contains('hidden') ) {
 		animateCSS('#emailOptions', 'fadeIn')
-		emailOptions.style.visibility = "visible";
+		emailOptions.classList.remove('hidden');
+		emailOptions.classList.add('visible');
 	} else {
 		animateCSS('#emailOptions', 'fadeOut', function(){
-			emailOptions.style.visibility = "collapse";
+			emailOptions.classList.remove('visible');
+			emailOptions.classList.add('hidden');
+		})
+	}
+}
+//this needs to be refactored with emailOpsToggle
+const creditsToggle = () => {
+	if ( creditsLinks.classList.contains('hidden') ) {
+		animateCSS('#creditsLinks', 'fadeIn')
+		creditsLinks.classList.remove('hidden');
+		creditsLinks.classList.add('visible');
+	} else {
+		animateCSS('#creditsLinks', 'fadeOut', function(){
+			creditsLinks.classList.remove('visible');
+			creditsLinks.classList.add('hidden');
 		})
 	}
 }
@@ -111,3 +130,6 @@ navAbout.addEventListener("click", () => {navSelect('about')}, false);
 navSkills.addEventListener("click", () => {navSelect('skills')}, false);
 navProjects.addEventListener("click", () => {navSelect('projects')}, false);
 navContact.addEventListener("click", () => {navSelect('contact')}, false);
+copy.addEventListener("click", () => {copyToClipboard('bshipos@gmail.com')}, false);
+email.addEventListener("click", emailOpsToggle, false);
+credits.addEventListener("click", creditsToggle, false);
