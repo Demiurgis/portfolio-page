@@ -1,5 +1,5 @@
 contact = #006600
-about = #ff9933
+about = #ff9933		e25822
 splash = #006666
 skills = #9933cc
 projects = #333399

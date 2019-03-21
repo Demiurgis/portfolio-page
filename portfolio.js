@@ -1,4 +1,4 @@
-(function iife(){
+// (function iife(){
 
 const sideNav = document.getElementById("sideNav");
 const sideBtn = document.getElementById("sideBtn");
@@ -14,6 +14,7 @@ const copy = document.getElementById("copy");
 const email = document.getElementById("email");
 const creditsLinks = document.getElementById("creditsLinks");
 const credits = document.getElementById("credits");
+const controls = document.querySelector(".controls");
 
 const openNav = () => {
 	sideNav.classList.add('openNav');
@@ -131,5 +132,34 @@ copy.addEventListener("click", () => {copyToClipboard('bshipos@gmail.com')}, fal
 email.addEventListener("click", emailOpsToggle, false);
 credits.addEventListener("click", creditsToggle, false);
 sideBtn.addEventListener("click", toggleNav, false);
+controls.addEventListener("click", (e) => {
+	if ( body.classList.contains("splash") && e.target.classList.contains('fwdCtrl') ) {
+		navSelect('about');
+		break
+	}
+	if ( body.classList.contains("about" )) {
+		if ( e.target.classList.contains('fwdCtrl') ) {
+			navSelect("skills");
+		}
+		if ( e.target.classList.contains('backCtrl') ) {
+			navSelect("splash");
+		}
+		if ( e.target.classList.contains('splashCtl') ) {
+			navSelect("splash");
+		}
+		break
+	}
+	if ( body.classList.contains("skills" )) {
+		if ( e.target.classList.contains('fwdCtrl') ) {
+			navSelect("projects");
+		}
+		if ( e.target.classList.contains('backCtrl') ) {
+			navSelect("about");
+		}
+		if ( e.target.classList.contains('splashCtl') ) {
+			navSelect("splash");
+		}
+	}
+}, false);
 
-})();
+// })();

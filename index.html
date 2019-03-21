@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width" />
 	<title>Brian Shipos - Web Developer</title>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:100,500,600,700,800" rel="stylesheet">
+	<link rel="shortcut icon" type="image/png" href="./resources/bs-icon.png"/>
 	<link rel="stylesheet" href="portfolio.css">
 </head>
-<body id="body" scroll="no" class="splash" style="overflow: hidden">
+<body id="body" scroll="no" class="splash">
 	<nav>
 		<div id="sideNav" class="sideNav">
 			  <div data-nav-id="splash" id="navSplash">Splash</div>
@@ -18,26 +20,39 @@
 			  <div data-nav-id="contact" id="navContact">Contact</div>
 		</div>
 
-		<div id="sideBtn" class="sideBtn navContainer" onclick="toggleNav()">
+		<div id="sideBtn" class="sideBtn navContainer">
 			<div class="navDot"></div>
 			<div class="navDot"></div>
 			<div class="navDot"></div>
 		</div>
 		<span class="pulse"></span>
+
+		<div class="controls">
+			<div class="ctrlBtn splashCtrl link">splash page</div>
+			<div class="ctrlBtn fwdCtrl link">forward <i class="arrow right"></i><i class="arrow right"></i></div>
+			<div class="ctrlBtn backCtrl link"><i class="arrow left"></i><i class="arrow left"></i> back</div>
+		</div>
 	</nav>
 	<main id="splash" class="main">
-		<div id="">
+		<div id="splashContainer">
 			<div class="">brian shipos</div>
 			<div>your next</div>
 			<div class="words">
 				<span>front-end developer</span>
 				<span>co-worker</span>
 				<span>hire</span>
+				<span>star</span>
+				<span>superhero</span>
+				<span>interview</span>
+				<span>hire</span>
+				<span>coding wizard</span>
+				<span>contact</span>
+				<span>hire</span>
 			</div>
 		</div>
 	</main>
 	<main id="about">
-		<div>About me!</div>
+		<div>My name is <strong>Brian Shipos</strong>. My goal is to utilize my ability to adapt to fast changing priorities and master new tasks quickly to switch careers into the programming field as a Front-end Developer. I have a Bachelor of Science degree in Graphic Design and 14 years working in an environment with competing deadlines and a focus on teamwork to achieve goals. I have a unique set of skills that bring value that other programmers do not have.</div>
 	</main>
 	<main id="skills">
 		<ul>
