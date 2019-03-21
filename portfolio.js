@@ -132,34 +132,62 @@ copy.addEventListener("click", () => {copyToClipboard('bshipos@gmail.com')}, fal
 email.addEventListener("click", emailOpsToggle, false);
 credits.addEventListener("click", creditsToggle, false);
 sideBtn.addEventListener("click", toggleNav, false);
-controls.addEventListener("click", (e) => {
-	if ( body.classList.contains("splash") && e.target.classList.contains('fwdCtrl') ) {
-		navSelect('about');
-		break
+// controls.addEventListener("click", (e) => {
+// 	if ( body.classList.contains("splash") && e.target.classList.contains('fwdCtrl') ) {
+// 		openNav()
+// 		navSelect('about');
+// 	} else if ( body.classList.contains("about" )) {
+// 		if ( e.target.classList.contains('fwdCtrl') ) {
+// 			navSelect("skills");
+// 		}
+// 		if ( e.target.classList.contains('backCtrl') ) {
+// 			navSelect("splash");
+// 		}
+// 		if ( e.target.classList.contains('splashCtrl') ) {
+// 			navSelect("splash");
+// 		}
+// 	} else if ( body.classList.contains("skills" )) {
+// 		if ( e.target.classList.contains('fwdCtrl') ) {
+// 			navSelect("projects");
+// 		}
+// 		if ( e.target.classList.contains('backCtrl') ) {
+// 			navSelect("about");
+// 		}
+// 		if ( e.target.classList.contains('splashCtrl') ) {
+// 			navSelect("splash");
+// 		}
+// 	}  else if ( body.classList.contains("projects" )) {
+// 		if ( e.target.classList.contains('fwdCtrl') ) {
+// 			navSelect("contact");
+// 		}
+// 		if ( e.target.classList.contains('backCtrl') ) {
+// 			navSelect("skills");
+// 		}
+// 		if ( e.target.classList.contains('splashCtrl') ) {
+// 			navSelect("splash");
+// 		}
+// 	} else if ( body.classList.contains("contact" )) {
+// 		if ( e.target.classList.contains('backCtrl') ) {
+// 			navSelect("projects");
+// 		}
+// 		if ( e.target.classList.contains('splashCtrl') ) {
+// 			navSelect("splash");
+// 		}
+// 	}
+// }, false);
+
+controls.addEventListener('click', ( e ) => {
+	const navPages = Array.from( document.querySelector('.pages').children )
+	const currentPage = navPages.indexOf(document.querySelector(`#${document.body.classList.item(0)}`))
+	let goto;
+	if ( e.target.classList.contains('fwdCtrl') ){
+		goto = currentPage + 1;
+	} else if ( e.target.classList.contains('backCtrl') ){
+		goto = currentPage - 1;
+	} else if ( e.target.classList.contains('splashCtrl') ){
+		goto = 0;
 	}
-	if ( body.classList.contains("about" )) {
-		if ( e.target.classList.contains('fwdCtrl') ) {
-			navSelect("skills");
-		}
-		if ( e.target.classList.contains('backCtrl') ) {
-			navSelect("splash");
-		}
-		if ( e.target.classList.contains('splashCtl') ) {
-			navSelect("splash");
-		}
-		break
-	}
-	if ( body.classList.contains("skills" )) {
-		if ( e.target.classList.contains('fwdCtrl') ) {
-			navSelect("projects");
-		}
-		if ( e.target.classList.contains('backCtrl') ) {
-			navSelect("about");
-		}
-		if ( e.target.classList.contains('splashCtl') ) {
-			navSelect("splash");
-		}
-	}
-}, false);
+	navSelect(navPages[goto].id);
+}, false)
 
 // })();

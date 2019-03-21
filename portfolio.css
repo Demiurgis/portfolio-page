@@ -178,7 +178,30 @@ main {
 	body #splash, body #about, body #skills, body #projects, body #contact {
 		height: 88vh;
 	} 
-
+	body .controls .splashCtrl {
+		left: 8vw;
+		top: 1vh;
+		transform: scale(.7);
+	}
+	body .controls .fwdCtrl {
+		bottom: 1vh;
+		right: 8vw;
+		transform: scale(.7);
+	}
+	body .controls .backCtrl {
+		bottom: 1vh;
+		left: 8vw;
+		transform: scale(.7);
+	}
+	body #about {
+		line-height: 2.7rem
+	}
+	nav .openNav {
+		width: calc(100vw - 6vh);
+	}
+	nav .openBtn{
+		margin-right: calc(100vw - 6vh);
+	}
 }
 
 #splash {
@@ -265,6 +288,7 @@ main {
 #about {
 	height: 78vh;
 	font: 600 calc(2rem + .4vw) "Raleway";
+	line-height: 4rem;
 	background: green no-repeat center fixed  url("./resources/aboutalt.gif");
 	background-size: cover;
 	display: none;
