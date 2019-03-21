@@ -182,9 +182,9 @@ controls.addEventListener('click', ( e ) => {
 	let goto;
 	if ( e.target.classList.contains('fwdCtrl') ){
 		goto = currentPage + 1;
-	} else if ( e.target.classList.contains('backCtrl') ){
+	} else if ( e.target.classList.contains('backCtrl') || e.target.classList.contains('left')){
 		goto = currentPage - 1;
-	} else if ( e.target.classList.contains('splashCtrl') ){
+	} else if ( e.target.classList.contains('splashCtrl') || e.target.classList.contains('right')){
 		goto = 0;
 	}
 	navSelect(navPages[goto].id);
