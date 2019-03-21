@@ -121,6 +121,34 @@ main {
 	background: green no-repeat center fixed  url("./resources/splash.gif");
 	background-size: cover;
 	display: none;
+
+}
+
+.words span {
+	position: absolute;
+	opacity: 0;
+	width: 100%;
+	color: #9933cc;
+}
+
+.words1 span{
+	animation: rotateWordsFirst 9s linear infinite 0s;
+}
+.words span:nth-child(2) { 
+	animation-delay: 3s; 
+	color: #333399;
+}
+.words span:nth-child(3) { 
+	animation-delay: 6s; 
+	color: #ff9933;	
+}
+
+@keyframes rotateWordsFirst {
+    0% { opacity: 1; animation-timing-function: ease-in; height: 0px; }
+    30% { opacity: .5; height: 60px; }
+    40% { opacity: 0; height: 60px; }
+	75% { opacity: 0; height: 60px; }
+    100% { opacity: 0; }
 }
 
 #about {
