@@ -5,7 +5,7 @@
 body{
 	height: 78vh;
 	margin: 11vh;
-	background: #cbcbcb;
+	background: #999999;
 }
 
 nav {
@@ -43,6 +43,7 @@ nav {
 	color: #818181;
 	display: block;
 	transition: .1s;
+	cursor: pointer;
 }
 
 .sideNav div:hover {
@@ -121,7 +122,7 @@ main {
 	background: green no-repeat center fixed  url("./resources/splash.gif");
 	background-size: cover;
 	display: none;
-
+	line-height: 6rem
 }
 
 .words span {
@@ -131,7 +132,7 @@ main {
 	color: #9933cc;
 }
 
-.words1 span{
+.words span{
 	animation: rotateWordsFirst 9s linear infinite 0s;
 }
 .words span:nth-child(2) { 
@@ -144,11 +145,11 @@ main {
 }
 
 @keyframes rotateWordsFirst {
-    0% { opacity: 1; animation-timing-function: ease-in; height: 0px; }
-    30% { opacity: .5; height: 60px; }
-    40% { opacity: 0; height: 60px; }
+	0% { opacity: 1; animation-timing-function: ease-in; height: 0px; }
+	30% { opacity: .5; height: 60px; }
+	35% { opacity: 0; height: 60px; }
 	75% { opacity: 0; height: 60px; }
-    100% { opacity: 0; }
+	100% { opacity: 0; }
 }
 
 #about {
@@ -162,9 +163,10 @@ main {
 #skills {
 	height: 78vh;
 	font: 700 3rem "Raleway";
-	background: green no-repeat center fixed  url("./resources/skills.gif");
+	background: green no-repeat center fixed  url("./resources/skillsalt.gif");
 	background-size: cover;
 	display: none;
+	line-height: 4.7rem;
 }
 
 .baselineshift {
@@ -186,11 +188,17 @@ i {
 
 #contact {
 	height: 78vh;
-	font: 800 3rem "Raleway";
-	background: green no-repeat center fixed  url("./resources/contact.gif");
+	font: 600 3rem "Raleway";
+	background: green no-repeat center fixed  url("./resources/contactalt.gif");
 	background-size: cover;
 	display: none;
 	text-align: right;
+	line-height: 4rem;
+}
+
+#name, #email {
+	font: 800 3rem "Raleway";
+	line-height: 4rem;
 }
 
 .hidden {
@@ -225,7 +233,7 @@ i {
 	display: none;
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 85rem) {
 	#projects {
 		font-size: 2rem
 	}
@@ -247,17 +255,22 @@ i {
 
 .project p {
 	padding-left: 1rem;
+	line-height: calc(1.8rem + .6vw);
 }
 
 .project {
-	padding-bottom: 2rem;
 	padding-left: 1rem;
+	line-height: 2rem
 }
 
 .link {
 	color: white;
 	text-decoration: none;
 	cursor: pointer;
+}
+
+.link:hover {
+	opacity: .5;
 }
 
 .pulse {
@@ -285,10 +298,6 @@ i {
     transform: scale( .7, .7);
     opacity: 0.0;
   }
-}
-
-.hover:hover {
-	opacity: .5;
 }
 
 .splash #splash {

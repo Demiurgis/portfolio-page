@@ -1,3 +1,5 @@
+(function iife(){
+
 const sideNav = document.getElementById("sideNav");
 const sideBtn = document.getElementById("sideBtn");
 const splash = document.getElementById("splash");
@@ -8,11 +10,6 @@ const contact = document.getElementById("contact");
 const body = document.getElementById("body");
 const emailOptions = document.getElementById("emailOptions");
 const catFriends = document.getElementById("catFriends");
-const navSplash = document.getElementById("navSplash");
-const navAbout = document.getElementById("navAbout");
-const navSkills = document.getElementById("navSkills");
-const navProjects = document.getElementById("navProjects");
-const navContact = document.getElementById("navContact");
 const copy = document.getElementById("copy");
 const email = document.getElementById("email");
 const creditsLinks = document.getElementById("creditsLinks");
@@ -124,12 +121,15 @@ const scrollDebounce = debounce(function() {
 	toggleNav()
 }, 400, true);
 
-window.addEventListener("wheel", scrollDebounce);
-navSplash.addEventListener("click", () => {navSelect('splash')}, false);
-navAbout.addEventListener("click", () => {navSelect('about')}, false);
-navSkills.addEventListener("click", () => {navSelect('skills')}, false);
-navProjects.addEventListener("click", () => {navSelect('projects')}, false);
-navContact.addEventListener("click", () => {navSelect('contact')}, false);
+window.addEventListener("wheel", scrollDebounce, false);
+sideNav.addEventListener("click", (e) => {
+	if ( e.target.dataset.navId ){
+		navSelect( e.target.dataset.navId );
+	}
+}, false);
 copy.addEventListener("click", () => {copyToClipboard('bshipos@gmail.com')}, false);
 email.addEventListener("click", emailOpsToggle, false);
 credits.addEventListener("click", creditsToggle, false);
+sideBtn.addEventListener("click", toggleNav, false);
+
+})();

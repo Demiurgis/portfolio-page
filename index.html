@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Brian Shipos</title>
+	<title>Brian Shipos - Web Developer</title>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:100,500,600,700,800" rel="stylesheet">
@@ -11,11 +11,11 @@
 <body id="body" scroll="no" class="splash" style="overflow: hidden">
 	<nav>
 		<div id="sideNav" class="sideNav">
-			  <div class="link" id="navSplash">Splash</div>
-			  <div class="link" id="navAbout">About</div>
-			  <div class="link" id="navSkills">Skills</div>
-			  <div class="link" id="navProjects">Projects</div>
-			  <div class="link" id="navContact">Contact</div>
+			  <div data-nav-id="splash" id="navSplash">Splash</div>
+			  <div data-nav-id="about" id="navAbout">About</div>
+			  <div data-nav-id="skills" id="navSkills">Skills</div>
+			  <div data-nav-id="projects" id="navProjects">Projects</div>
+			  <div data-nav-id="contact" id="navContact">Contact</div>
 		</div>
 
 		<div id="sideBtn" class="sideBtn navContainer" onclick="toggleNav()">
@@ -29,7 +29,7 @@
 		<div id="">
 			<div class="">brian shipos</div>
 			<div>your next</div>
-			<div class="words words1">
+			<div class="words">
 				<span>front-end developer</span>
 				<span>co-worker</span>
 				<span>hire</span>
@@ -52,13 +52,13 @@
 		</ul>
 	</main>
 	<main id="projects">
-		<a id="headline" class="hover link" target="_blank" rel="noopener noreferrer" href="https://github.com/Demiurgis">My GitHub</a>
+		<a id="headline" class=" link" target="_blank" rel="noopener noreferrer" href="https://github.com/Demiurgis">My GitHub</a>
 		<div class="project">
 			<h2>Facial Recognition Project</h2>
 			<div id="face">
 				<div>
-						<a class="hover link" href="https://facial-recognition-shipos.herokuapp.com/"  target="_blank" rel="noopener noreferrer">Project Page</a>
-						<a class="hover link" href="https://github.com/Demiurgis/facial-recognition" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+						<a class=" link" href="https://facial-recognition-shipos.herokuapp.com/"  target="_blank" rel="noopener noreferrer">Project Page</a>
+						<a class=" link" href="https://github.com/Demiurgis/facial-recognition" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
 				</div>	
 				<p>A responsive React App that recognizes the presence of a face in a photograph. Utilizes a REST server API with Express and Node.js. Registration and Sign-In utilizes a PostgreSQL database. API for facial recognition provided by Clarifai API.</p>
 			</div>
@@ -67,8 +67,8 @@
 			<h2>Cat-Friends Project</h2>
 			<div id="catFriends">
 				<div>
-					<a class="hover link" href="https://demiurgis.github.io/cat-friends/"  target="_blank" rel="noopener noreferrer">Project Page</a>
-					<a class="hover link" href="https://github.com/Demiurgis/cat-friends" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+					<a class=" link" href="https://demiurgis.github.io/cat-friends/"  target="_blank" rel="noopener noreferrer">Project Page</a>
+					<a class=" link" href="https://github.com/Demiurgis/cat-friends" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
 				</div>	
 				<p>A responsive React App that sorts a contact list. Created with React and then refactored with Redux.</p>
 			</div>
@@ -77,8 +77,8 @@
 			<h2>Background Generator</h2>
 			<div id="bkgdGen">
 				<div>
-					<a class="hover link" href="https://demiurgis.github.io/background-generator/"  target="_blank" rel="noopener noreferrer">Project Page</a>
-					<a class="hover link" href="https://github.com/Demiurgis/background-generator" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+					<a class=" link" href="https://demiurgis.github.io/background-generator/"  target="_blank" rel="noopener noreferrer">Project Page</a>
+					<a class=" link" href="https://github.com/Demiurgis/background-generator" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
 				</div>	
 				<p>Simple app that displays a linear gradient as background. Color selectors as well as a random feature allows for custom backgrounds with CSS text for ease of use..</p>
 			</div>
@@ -86,16 +86,17 @@
 	</main>
 	<main id="contact">
 		<div id="emailOptions" class="hidden">
-			<a class="hover link" id="mailto" href="mailto:bshipos@gmail.com">email</a>
-			<span id="copy" class="hover link">copy</span>
+			<a class=" link" id="mailto" href="mailto:bshipos@gmail.com">email</a>
+			<span id="copy" class=" link">copy</span>
 		</div>
-		<div class="hover link" id="email" >bshipos@gmail.com 
+		<div id="name">Brian Shipos</div>
+		<div class=" link" id="email" >bshipos@gmail.com 
 		</div>
-		<a class="hover link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/brian-shipos" >LinkedIn</a>
-		<a class="hover link" id="resume"  target="_blank" rel="noopener noreferrer" href="./resources/BrianShipos.pdf">Resumé</a>
-		<div id="credits" class="hover link">Credits
+		<a class=" link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/brian-shipos" >LinkedIn</a>
+		<a class=" link" id="resume"  target="_blank" rel="noopener noreferrer" href="./resources/BrianShipos.pdf">Resumé</a>
+		<div id="credits" class=" link">Credits
 			<div id="creditsLinks" class="hidden">
-				<a  class="link hover" target="_blank" rel="noopener noreferrer" href="https://www.freepik.com/free-photos-vectors/background">Elements of backgrounds provided by various www.freepik.com creators (starline , freepik, BiZkettE1, davidzydd, alicia_mb, visnezh)</a>
+				<a  class="link " target="_blank" rel="noopener noreferrer" href="https://www.freepik.com/free-photos-vectors/background">Elements of backgrounds provided by various www.freepik.com creators (starline , freepik, BiZkettE1, davidzydd, alicia_mb, visnezh)</a>
 			</div>
 		</div>
 
