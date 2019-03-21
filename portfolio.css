@@ -10,7 +10,8 @@ body{
 
 nav {
 	display: flex;
-	font-family: Arial;
+	font-family: 'Raleway', sans-serif;
+
 }
 
 .sideNav {
@@ -109,7 +110,7 @@ main {
 	justify-content: center;
 	align-items: flex-end;
 	height: 100vh;
-	font: 800 4.25rem "Arial";
+	font: 800 4.25rem "Raleway";
 	color: white;
 	padding-right: 30%;
 	min-width: 30vw;
@@ -124,7 +125,7 @@ main {
 
 #about {
 	height: 78vh;
-	font: 800 3rem "Arial";
+	font: 800 3rem "Raleway";
 	background: green no-repeat center fixed  url("./resources/about.gif");
 	background-size: cover;
 	display: none;
@@ -132,10 +133,15 @@ main {
 
 #skills {
 	height: 78vh;
-	font: 800 3rem "Arial";
+	font: 700 3rem "Raleway";
 	background: green no-repeat center fixed  url("./resources/skills.gif");
 	background-size: cover;
 	display: none;
+}
+
+.baselineshift {
+	position: relative;
+	top: -.165em;
 }
 
 .postgreSQL {
@@ -152,7 +158,7 @@ i {
 
 #contact {
 	height: 78vh;
-	font: 800 3rem "Arial";
+	font: 800 3rem "Raleway";
 	background: green no-repeat center fixed  url("./resources/contact.gif");
 	background-size: cover;
 	display: none;
@@ -174,7 +180,7 @@ i {
 
 #creditsLinks{
 	text-align: right;
-	font: 100 1.75rem "Arial";
+	font: 100 1.75rem "Raleway";
 	width: 30rem;
 }
 
@@ -182,7 +188,7 @@ i {
 	height: 78vh;
 	align-items: flex-start;
 	padding-left: 15%;
-	font: 500 calc(1rem + .5vw) "Arial";
+	font: 500 calc(1rem + .5vw) "Raleway";
 	color: white;
 	text-decoration: none;
 	padding-right: 15%;
@@ -202,12 +208,12 @@ i {
 }
 
 #headline { 
-	font: 800 calc(2rem + .6vw) "Arial";
+	font: 800 calc(2rem + .6vw) "Raleway";
 	padding-left: 0;
  }
 
 .project a {
-	font-weight: 600;
+	font-weight: 700;
 	padding-left: 2.5rem;
 }
 
