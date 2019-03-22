@@ -27,7 +27,6 @@ nav {
 	right: 0;
 	background: rgba(15, 15, 15, 1) url("./resources/navscroll.gif");
 	overflow-x: hidden;
-	/*padding-top: 25%;*/
 	transition: 0.5s;
 	transition-timing-function: ease-in-out; 
 }
@@ -43,7 +42,8 @@ nav {
 	font-size: 3.5rem;
 	color: #818181;
 	display: block;
-	transition: .1s;
+	transition: .1s, .6s;
+	transition-property: color, visibility;
 	cursor: pointer;
 }
 
@@ -477,7 +477,7 @@ i {
 }
 
 .splash .controls div{
-	background-color: #006666;
+	background-color: #787878;
 }
 
 .splash .splashCtrl, .splash .backCtrl {
@@ -489,7 +489,7 @@ i {
 }
 
 .about .controls div{
-	background-color: #e25822;
+	background-color: #787878;
 }
 
 .about .splashCtrl, .about .backCtrl,  .about .fwdCtrl {
@@ -497,7 +497,7 @@ i {
 }
 
 .skills .controls div{
-	background-color: #9933cc;
+	background-color: #787878;
 }
 
 .skills .splashCtrl, .skills .backCtrl,  .skills .fwdCtrl {
@@ -505,7 +505,7 @@ i {
 }
 
 .projects .controls div{
-	background-color: #333399;
+	background-color: #787878;
 }
 
 .projects .splashCtrl, .projects .backCtrl,  .projects .fwdCtrl {
@@ -513,7 +513,7 @@ i {
 }
 
 .contact .controls div{
-	background-color: #006600;
+	background-color: #787878;
 }
 
 .contact .splashCtrl, .contact .backCtrl {
