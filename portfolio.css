@@ -121,7 +121,7 @@ nav {
 }
 
 .controls .fwdCtrl {
-	position: absolute;
+	position: fixed;
 	bottom: 3vh;
 	right: 16vh;
 	padding: 8px 16px;
@@ -129,7 +129,7 @@ nav {
 }
 
 .controls .backCtrl {
-	position: absolute;
+	position: fixed;
 	bottom: 3vh;
 	left: 16vh;
 	padding: 8px 16px;
@@ -184,17 +184,17 @@ main {
 		transform: scale(.7);
 	}
 	body .controls .fwdCtrl {
-		bottom: 1vh;
+		bottom: 0;
 		right: 8vw;
 		transform: scale(.7);
 	}
 	body .controls .backCtrl {
-		bottom: 1vh;
+		bottom: 0;
 		left: 8vw;
 		transform: scale(.7);
 	}
 	body #about {
-		line-height: 2.7rem
+		line-height: 2.3rem
 	}
 	nav .openNav {
 		width: calc(100vw - 6vh);
@@ -206,7 +206,7 @@ main {
 
 #splash {
 	height: 78vh;
-	background: green no-repeat center fixed  url("./resources/splash.gif");
+	background: #006666 no-repeat center fixed  url("./resources/splash.gif");
 	background-size: cover;
 	display: none;
 	font: 800 calc(2.5rem + 1vw) "Raleway";
@@ -287,9 +287,9 @@ main {
 
 #about {
 	height: 78vh;
-	font: 600 calc(1.5rem + .5vw) "Raleway";
+	font: 600 calc(1.2rem + .7vw) "Raleway";
 	line-height: 3.75rem;
-	background: green no-repeat center fixed  url("./resources/aboutalt.gif");
+	background: #e25822 no-repeat center fixed  url("./resources/aboutalt.gif");
 	background-size: cover;
 	display: none;
 	padding-right: 15%;
@@ -298,8 +298,8 @@ main {
 
 #skills {
 	height: 78vh;
-	font: 700 calc(2rem + 1vw) "Raleway";
-	background: green no-repeat center fixed  url("./resources/skillsalt.gif");
+	font: 700 calc(1.6rem + 1.2vw) "Raleway";
+	background: #9933cc no-repeat center fixed  url("./resources/skillsalt.gif");
 	background-size: cover;
 	display: none;
 	line-height: 4.7rem;
@@ -307,7 +307,7 @@ main {
 
 .baselineshift {
 	position: relative;
-	top: -.165em;
+	top: -.15em;
 }
 
 .postgreSQL {
@@ -324,17 +324,16 @@ i {
 
 #contact {
 	height: 78vh;
-	font: 600 3rem "Raleway";
-	background: green no-repeat center fixed  url("./resources/contactalt.gif");
+	font: 600 calc(2.5rem + .5vw) "Raleway";
+	background: #006600 no-repeat center fixed  url("./resources/contactalt.gif");
 	background-size: cover;
 	display: none;
 	text-align: right;
 	line-height: 4rem;
 }
 
-#name, #email {
-	font: 800 3rem "Raleway";
-	line-height: 4rem;
+#email {
+	font-weight: 800;
 }
 
 .hidden {
@@ -352,7 +351,7 @@ i {
 
 #creditsLinks{
 	text-align: right;
-	font: 100 1.75rem "Raleway";
+	font: 100 calc(1rem + .75vw) "Raleway";
 	width: 30rem;
 }
 
@@ -360,11 +359,11 @@ i {
 	height: 78vh;
 	align-items: flex-start;
 	padding-left: 15%;
-	font: 500 calc(1rem + .5vw) "Raleway";
+	font: 500 calc(.75rem + .75vw) "Raleway";
 	color: white;
 	text-decoration: none;
 	padding-right: 15%;
-	background: green no-repeat center fixed  url("./resources/projects.gif");
+	background: #333399 no-repeat center fixed  url("./resources/projects.gif");
 	background-size: cover;
 	display: none;
 }
